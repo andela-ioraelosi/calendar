@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   </head>
   <body ng-cloak>
+
     <nav>
-      <div class="nav-wrapper container">
+      <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Calendar</a>
         <a href="#" data-activates="sidebar" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         <ul class="right hide-on-med-and-down">
@@ -21,6 +22,19 @@
         </ul>
       </div>
     </nav>
+
+    <div class="" ng-controller="EventController as register">
+      <h2>{{ event.heading }}</h2>
+      <div class="row">
+        <div class="col s4 m2" ng-repeat="event in register.events">
+          <div class="card-panel small grey lighten-5">
+            <p>{{ event.date }}</p>
+            <span class="card-title black-text">{{ event.title }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="./js/vendor/angular.js"></script>
     <script src="./js/vendor/jquery.js"></script>
     <script src="./js/vendor/materialize.js"></script>
