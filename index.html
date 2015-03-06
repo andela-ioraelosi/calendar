@@ -8,9 +8,31 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   </head>
-  <body ng-cloak>
+  <body ng-cloak ng-app="calendar">
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo">Calendar</a>
+        <a href="#" data-activates="sidebar" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">About</a></li>
+        </ul>
+        <ul class="side-nav" id="sidebar">
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
     <script src="./js/vendor/angular.js"></script>
     <script src="./js/vendor/jquery.js"></script>
     <script src="./js/vendor/materialize.js"></script>
+    <script>
+      // Initialize side bar
+      $(document).ready(function () {
+        $('.button-collapse').sideNav();
+      });
+    </script>
+
+    <!-- Application script files -->
+    <script src=""></script>
+    <script src="js/app/calendar.js"></script>
   </body>
 </html>
