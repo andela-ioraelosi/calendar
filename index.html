@@ -33,8 +33,9 @@
               <p>{{ event.title }}</p>
             </div>
             <div class="card-action">
-              <a class="waves-effect waves-light btn light-blue lighten-1 white-text" href="#">Edit</a>
+              <a ng-show="event.title.length > 0" class="waves-effect waves-light btn light-blue lighten-1 white-text" href="#">Edit</a>
               <a ng-show="event.title.length > 0" class="waves-effect waves-light btn red lighten-1 white-text" href="#">Delete</a>
+              <a ng-show="event.title <= 0" class="waves-effect waves-light btn green lighten-1 white-text" href="#">Add</a>
             </div>
           </div>
         </div>
