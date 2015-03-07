@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang='en' ng-app="calendar">
+<html lang='en' ng-app="app">
   <head>
     <meta charset="utf-8">
     <title>Calendar application</title>
@@ -24,22 +24,7 @@
     </nav>
 
     <div class="" ng-controller="EventController as register">
-      <h2>{{ event.heading }}</h2>
-      <div class="row">
-        <div class="col s4 m2" ng-repeat="event in register.events">
-          <div class="card small grey lighten-5">
-            <div class="card-content">
-              <span class="card-title black-text">{{ event.day }}</span>
-              <p>{{ event.title }}</p>
-            </div>
-            <div class="card-action">
-              <a ng-show="event.title.length > 0" class="waves-effect waves-light btn light-blue lighten-1 white-text" href="#">Edit</a>
-              <a ng-show="event.title.length > 0" class="waves-effect waves-light btn red lighten-1 white-text" href="#">Delete</a>
-              <a ng-show="event.title <= 0" class="waves-effect waves-light btn green lighten-1 white-text" href="#">Add</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p>{{ register.events }}</p>
     </div>
 
     <script src="./js/vendor/angular.js"></script>
@@ -53,7 +38,9 @@
     </script>
 
     <!-- Application script files -->
-    <script src=""></script>
     <script src="js/app/app.js"></script>
+    <script src="js/app/event/event.module.js"></script>
+    <script src="js/app/event/services/event.service.js"></script>
+    <script src="js/app/event/controllers/event.controller.js"></script>
   </body>
 </html>
