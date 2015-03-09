@@ -23,8 +23,162 @@
       </div>
     </nav>
 
-    <div class="" ng-controller="EventController as register">
-      <p>{{ register.events }}</p>
+    <div class="container" ng-controller="EventController as register">
+      <table>
+        <thead>
+          <tr>
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thurday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td ng-repeat="event in register.events.slice(0,7)">
+              <div class="card-panel grey black-text lighten-5" ng-click="register.current = event.id">
+                <div>
+                  {{ event.id }}
+                </div>
+                <form ng-show="register.current === event.id">
+                  <div id="new-event" class="row">
+                    <div class="input-field col s6">
+                      <input type="text" id="first-name" class="validate" ng-model="register.newEvent.title">
+                    </div>
+                    <div class="input-field col s6">
+                      <button class="btn red lighten-3" ng-click="register.addEvent(event.id, register.newEvent)" ng-show="register.adding">Add event</button>
+                      <button class="btn blue lighten-3" ng-click="register.editEvent()" ng-show="register.editing">Edit event</button>
+                    </div>
+                  </div>
+                  <div id="current-events">
+                    <ul class="collection">
+                      <li class="collection-item" ng-repeat="dayEvent in event.events">{{ dayEvent.title }}<a href="#" class="blue lighten-3 black-text" ng-click="register.prepareEdit(event.id, dayEvent, $index)">Edit</a><a href="#" class="red lighten-3 black-text" ng-click="register.removeEvent(event.id, $index)">Delete</a></li>
+                    </ul>
+                  </div>
+                </form>
+                <div ng-repeat="dayEvent in event.events.slice(0, 2)">
+                  <span class="red lighten-3 black-text" >{{ dayEvent.title.slice(0, 8) }}</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td ng-repeat="event in register.events.slice(7,14)">
+              <div class="card-panel grey black-text lighten-5" ng-click="register.current = event.id">
+                <div>
+                  {{ event.id }}
+                </div>
+                <form ng-show="register.current === event.id">
+                  <div id="new-event" class="row">
+                    <div class="input-field col s6">
+                      <input type="text" id="first-name" class="validate" ng-model="register.newEvent.title">
+                    </div>
+                    <div class="input-field col s6">
+                      <button class="btn red lighten-3" ng-click="register.addEvent(event.id, register.newEvent)" ng-show="register.adding">Add event</button>
+                      <button class="btn blue lighten-3" ng-click="register.editEvent()" ng-show="register.editing">Edit event</button>
+                    </div>
+                  </div>
+                  <div id="current-events">
+                    <ul class="collection">
+                      <li class="collection-item" ng-repeat="dayEvent in event.events">{{ dayEvent.title }}<a href="#" class="blue lighten-3 black-text" ng-click="register.prepareEdit(event.id, dayEvent, $index)">Edit</a><a href="#" class="red lighten-3 black-text" ng-click="register.removeEvent(event.id, $index)">Delete</a></li>
+                    </ul>
+                  </div>
+                </form>
+                <div ng-repeat="dayEvent in event.events.slice(0, 2)">
+                  <span class="red lighten-3 black-text" >{{ dayEvent.title.slice(0, 8) }}</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td ng-repeat="event in register.events.slice(14,21)">
+              <div class="card-panel grey black-text lighten-5" ng-click="register.current = event.id">
+                <div>
+                  {{ event.id }}
+                </div>
+                <form ng-show="register.current === event.id">
+                  <div id="new-event" class="row">
+                    <div class="input-field col s6">
+                      <input type="text" id="first-name" class="validate" ng-model="register.newEvent.title">
+                    </div>
+                    <div class="input-field col s6">
+                      <button class="btn red lighten-3" ng-click="register.addEvent(event.id, register.newEvent)" ng-show="register.adding">Add event</button>
+                      <button class="btn blue lighten-3" ng-click="register.editEvent()" ng-show="register.editing">Edit event</button>
+                    </div>
+                  </div>
+                  <div id="current-events">
+                    <ul class="collection">
+                      <li class="collection-item" ng-repeat="dayEvent in event.events">{{ dayEvent.title }}<a href="#" class="blue lighten-3 black-text" ng-click="register.prepareEdit(event.id, dayEvent, $index)">Edit</a><a href="#" class="red lighten-3 black-text" ng-click="register.removeEvent(event.id, $index)">Delete</a></li>
+                    </ul>
+                  </div>
+                </form>
+                <div ng-repeat="dayEvent in event.events.slice(0, 2)">
+                  <span class="red lighten-3 black-text" >{{ dayEvent.title.slice(0, 8) }}</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td ng-repeat="event in register.events.slice(21,28)">
+              <div class="card-panel grey black-text lighten-5" ng-click="register.current = event.id">
+                <div>
+                  {{ event.id }}
+                </div>
+                <form ng-show="register.current === event.id">
+                  <div id="new-event" class="row">
+                    <div class="input-field col s6">
+                      <input type="text" id="first-name" class="validate" ng-model="register.newEvent.title">
+                    </div>
+                    <div class="input-field col s6">
+                      <button class="btn red lighten-3" ng-click="register.addEvent(event.id, register.newEvent)" ng-show="register.adding">Add event</button>
+                      <button class="btn blue lighten-3" ng-click="register.editEvent()" ng-show="register.editing">Edit event</button>
+                    </div>
+                  </div>
+                  <div id="current-events">
+                    <ul class="collection">
+                      <li class="collection-item" ng-repeat="dayEvent in event.events">{{ dayEvent.title }}<a href="#" class="blue lighten-3 black-text" ng-click="register.prepareEdit(event.id, dayEvent, $index)">Edit</a><a href="#" class="red lighten-3 black-text" ng-click="register.removeEvent(event.id, $index)">Delete</a></li>
+                    </ul>
+                  </div>
+                </form>
+                <div ng-repeat="dayEvent in event.events.slice(0, 2)">
+                  <span class="red lighten-3 black-text" >{{ dayEvent.title.slice(0, 8) }}</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td ng-repeat="event in register.events.slice(28)">
+              <div class="card-panel grey black-text lighten-5" ng-click="register.current = event.id">
+                <div>
+                  {{ event.id }}
+                </div>
+                <form ng-show="register.current === event.id">
+                  <div id="new-event" class="row">
+                    <div class="input-field col s6">
+                      <input type="text" id="first-name" class="validate" ng-model="register.newEvent.title">
+                    </div>
+                    <div class="input-field col s6">
+                      <button class="btn red lighten-3" ng-click="register.addEvent(event.id, register.newEvent)" ng-show="register.adding">Add event</button>
+                      <button class="btn blue lighten-3" ng-click="register.editEvent()" ng-show="register.editing">Edit event</button>
+                    </div>
+                  </div>
+                  <div id="current-events">
+                    <ul class="collection">
+                      <li class="collection-item" ng-repeat="dayEvent in event.events">{{ dayEvent.title }}<a href="#" class="blue lighten-3 black-text" ng-click="register.prepareEdit(event.id, dayEvent, $index)">Edit</a><a href="#" class="red lighten-3 black-text" ng-click="register.removeEvent(event.id, $index)">Delete</a></li>
+                    </ul>
+                  </div>
+                </form>
+                <div ng-repeat="dayEvent in event.events.slice(0, 2)">
+                  <span class="red lighten-3 black-text" >{{ dayEvent.title.slice(0, 8) }}</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <script src="./js/vendor/angular.js"></script>
