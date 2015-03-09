@@ -1,41 +1,211 @@
-[
-  {
-    "title": "",
-    "day": 1
-  },
+{
+  "monthName": "March",
+  "id": 3,
+  "days": [
+    {
+      "id": 1,
+      "events": [
 
-  {
-    "title": "",
-    "day": 2
-  },
+      ]
+    },
+    {
+      "id": 2,
+      "events": [
 
-  {
-    "title": "",
-    "day": 3
-  },
+      ]
+    },
+    {
+      "id": 3,
+      "events": [
 
-  {
-    "title": "",
-    "day": 4
-  },
+      ]
+    },
+    {
+      "id": 4,
+      "events": [
 
-  {
-    "title": "",
-    "day": 5
-  },
+      ]
+    },
+    {
+      "id": 5,
+      "events": [
 
-  {
-    "title": "Grade Udacity project.",
-    "day": 6
-  },
+      ]
+    },
+    {
+      "id": 6,
+      "events": [
 
-  {
-    "title": "Take Edx Python class exam.",
-    "day": 7
-  },
+      ]
+    },
+    {
+      "id": 7,
+      "events": [
 
-  {
-    "title": "Discrete Math",
-    "day": 8
-  }
-]
+      ]
+    },
+    {
+      "id": 8,
+      "events": [
+        {
+          "title": "Facilitate Discrete Math Class."
+        },
+        {
+          "title": "Complete Calendar app."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "events": [
+        {
+          "title": "Bootcamp Begins"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 11,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 12,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 13,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 14,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 15,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 16,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 17,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 18,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 19,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 20,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 21,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 22,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 23,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 24,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 25,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 26,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 27,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 28,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 29,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 30,
+      "events": [
+
+      ]
+    },
+    {
+      "id": 31,
+      "events": [
+
+      ]
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    }
+  ]
+}
