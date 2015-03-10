@@ -3,12 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Calendar application</title>
-    <link rel="stylesheet" href="./css/materialize.css">
+    <!-- <link rel="stylesheet" href="./css/materialize.css"> -->
+    <link rel="stylesheet" href="./css/angular-material.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   </head>
-  <body ng-cloak>
+  <body layout="column">
+
+    <!-- Navigation bar -->
+    <nav id="navigation">
+      <md-content>
+        <md-toolbar>
+          <h2 class="md-toolbar-tools">
+            <span>Calendar</span>
+          </h2>
+        </md-toolbar>
+      </md-content>
+    </nav>
+
+
+  </body>
+  <!-- <body ng-cloak>
 
     <nav>
       <div class="nav-wrapper">
@@ -179,17 +195,15 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
 
+    <!-- Vendor script files -->
     <script src="./js/vendor/angular.js"></script>
-    <script src="./js/vendor/jquery.js"></script>
-    <script src="./js/vendor/materialize.js"></script>
-    <script>
-      // Initialize side bar
-      $(document).ready(function () {
-        $('.button-collapse').sideNav();
-      });
-    </script>
+    <!-- <script src="./js/vendor/jquery.js"></script>
+    // <script src="./js/vendor/materialize.js"></script> -->
+    <script src="./js/vendor/angular-animate.js"></script>
+    <script src="./js/vendor/angular-aria.js"></script>
+    <script src="./js/vendor/angular-material.js"></script>
 
     <!-- Application script files -->
     <script src="js/app/app.js"></script>
