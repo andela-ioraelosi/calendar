@@ -13,6 +13,7 @@ angular.module('event')
     register.editing = false;
 
     EventService.getEvents().success(function (data) {
+      register.months = data;
       register.events = data.days;
     })
     .error(function (err) {
