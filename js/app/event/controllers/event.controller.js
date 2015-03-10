@@ -3,6 +3,8 @@
 angular.module('event')
   .controller('EventController', ['EventService', function (EventService) {
     var register = this;
+
+    register.selectedMonth = 2;
     register.events = [];
     register.current = 0;
 

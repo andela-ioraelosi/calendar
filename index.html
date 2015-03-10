@@ -22,7 +22,16 @@
       </md-content>
     </nav>
 
+    <!-- Calendar content -->
+    <section ng-controller="EventController as register" layout="column">
 
+      <!-- Month Selector -->
+      <md-tabs md-selected="register.selectedMonth" flex>
+        <md-tab ng-repeat="month in register.months" label="{{ month.monthName }}">
+
+        </md-tab>
+      </md-tabs>
+    </section>
   </body>
   <!-- <body ng-cloak>
 
