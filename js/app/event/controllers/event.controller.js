@@ -5,7 +5,8 @@ angular.module('event')
     var register = this;
 
     register.selectedMonth = 2;
-    register.events = [];
+    register.months = [];
+
     register.current = 0;
 
     register.eventID = null;
@@ -16,7 +17,6 @@ angular.module('event')
 
     EventService.getEvents().success(function (data) {
       register.months = data;
-      register.events = data.days;
     })
     .error(function (err) {
       console.log(err);
@@ -26,7 +26,7 @@ angular.module('event')
       var newEvent = {};
       newEvent.title = eventData.title;
 
-      register.events[dayID - 1].events.push(newEvent);
+      register.months[register.selectedMonth].days[dayID - 1].events.push(newEvent);
       register.newEvent = {};
     };
 

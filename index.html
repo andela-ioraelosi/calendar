@@ -27,7 +27,73 @@
 
       <!-- Month Selector -->
       <md-tabs md-selected="register.selectedMonth" flex>
+
+        <!-- Month -->
         <md-tab ng-repeat="month in register.months" label="{{ month.monthName }}">
+
+          <!-- Month content -->
+          <div>
+            <!-- Day Labels -->
+            <div layout="row" layout-margin>
+              <div flex>
+                Sunday
+              </div>
+              <div flex>
+                Monday
+              </div>
+              <div flex>
+                Tuesday
+              </div>
+              <div flex>
+                Wednesday
+              </div>
+              <div flex>
+                Thursday
+              </div>
+              <div flex>
+                Friday
+              </div>
+              <div flex>
+                Saturday
+              </div>
+            </div>
+
+            <md-grid-list
+                md-cols-gt-md="7" md-row-height="1:1" md-gutter="4px">
+              <md-grid-tile
+                  class="grey"
+                  ng-repeat="day in month.days"
+                  ng-click="register.current = day.id">
+
+                  <form name="eventForm" ng-show="register.current === day.id">
+                    <div layout layout-sm="column">
+                      <md-input-container>
+                        <label>New Event</label>
+                        <input type="text" ng-model="register.newEvent.title">
+                      </md-input-container>
+                      <md-input-container>
+                        <md-button class="md-accent md-raised"
+                          ng-click="register.addEvent(day.id, register.newEvent)"
+                          ng-show="register.adding">
+                            Add
+                        </md-button>
+                      </md-input-container>
+                      <md-input-container>
+                        <md-button class="green md-raised"
+                          ng-click="register.editEvent()"
+                          ng-show="register.editing">
+                            Edit
+                        </md-button>
+                      </md-input-container>
+                    </div>
+                  </form>
+
+                  <md-subheader class="md-accent" ng-repeat="event in day.events">{{ event.title }}</md-subheader>
+
+                  <md-grid-tile-footer><h3>{{ day.id }}</h3></md-grid-tile-footer>
+
+              </md-grid-tile>
+            </md-grid-list>
 
         </md-tab>
       </md-tabs>
