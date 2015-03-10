@@ -1,0 +1,43 @@
+<md-dialog>
+  <md-content>
+    <form name="eventForm">
+      <div layout layout-sm="column">
+        <md-input-container>
+          <label>New Event</label>
+          <input type="text" ng-model="register.newEvent.title">
+        </md-input-container>
+        <md-input-container>
+          <md-button class="md-accent md-raised"
+            ng-click="register.addEvent(register.newEvent)"
+            ng-show="register.adding">
+              Add
+          </md-button>
+        </md-input-container>
+        <md-input-container>
+          <md-button class="green md-raised"
+            ng-click="register.saveEvent(register.newEvent)"
+            ng-show="register.editing">
+              Save
+          </md-button>
+        </md-input-container>
+      </div>
+    </form>
+    <md-list>
+      <md-item ng-repeat="event in register.events">
+        <md-item-content>
+          <div class="md-tile-content">
+            <h3>{{event.title}}</h3>
+            <md-button class="md-primary md-raised"
+              ng-click="register.prepareEdit(event.id, event)">
+              Edit
+            </md-button>
+            <md-button class="md-warn md-raised"
+              ng-click="register.removeEvent(event.id)">
+              Delete
+            </md-button>
+          </div>
+        </md-item-content>
+      </md-item>
+    </md-list>
+  </md-content>
+</md-dialog>
