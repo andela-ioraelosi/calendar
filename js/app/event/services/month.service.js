@@ -8,7 +8,7 @@ angular.module('event')
     if (months.length > 0) {
       monthsDefer.resolve(months);
     } else {
-      $http.get('./data/events.json').success(function (data) {
+      $http.get('./assets/data/events.json').success(function (data) {
         months = data;
         monthsDefer.resolve(data);
       });
