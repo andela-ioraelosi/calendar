@@ -4,9 +4,7 @@ angular.module('event')
   .controller('MonthController', ['MonthService', '$mdDialog', function (MonthService, $mdDialog) {
     var register = this;
 
-    MonthService.getMonths().then(function (months) {
-      register.months = months;
-    });
+    register.months = MonthService.getMonths();
 
     register.selectedMonth = 2;
 

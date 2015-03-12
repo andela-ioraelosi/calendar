@@ -4,17 +4,17 @@ angular.module('event')
   .controller('DayController', ['MonthService', 'currentMonth', 'currentDay', 'currentEvent', 'editing', 'adding', function (MonthService, currentMonth, currentDay, currentEvent, editing, adding) {
     var register = this;
 
-    register.dayID = currentDay;
+    register.firstDayID = MonthService.getFirstDayID(currentMonth);
+
+    register.dayID = currentDay - 1 + register.firstDayID;
     register.selectedMonth = currentMonth;
     register.eventID = currentEvent;
 
     register.adding = true;
     register.editing = false;
 
-    MonthService.getMonths().then(function (months) {
-      register.months = months;
-      register.events = months[register.selectedMonth].days[register.dayID - 1].events;
-    });
+    register.months = MonthService.getMonths();
+    register.events = register.months[register.selectedMonth].days[register.dayID].events;
 
     register.prepareEdit = function (eventID, eventData) {
       register.editing = true;
@@ -27,22 +27,22 @@ angular.module('event')
       var newEvent = {};
       newEvent.title = eventData.title;
 
-      register.months[register.selectedMonth].days[register.dayID - 1].events.push(newEvent);
+      MonthService.addEvent(register.selectedMonth, register.dayID, newEvent);
     };
 
     register.saveEvent = function (newEventData) {
       var editedEvent = {};
       editedEvent.title = newEventData.title;
 
-      register.months[register.selectedMonth].days[register.dayID - 1].events[register.eventID] = editedEvent;
+      MonthService.saveEvent(register.selectedMonth, register.dayID, register.eventID, editedEvent);
 
       register.editing = false;
       register.adding = true;
     };
 
     register.removeEvent = function (eventID) {
-      //register.events.splice(eventID, 1);
-      register.months[register.selectedMonth].days[register.dayID - 1].events.splice(eventID, 1)
+
+      MonthService.removeEvent(register.selectedMonth, register.dayID, eventID);
     };
 
   }]);
