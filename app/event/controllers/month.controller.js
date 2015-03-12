@@ -23,7 +23,7 @@ angular.module('event')
       $mdDialog.show({
         controller: 'DayController',
         controllerAs: 'register',
-        templateUrl: './js/app/event/partials/new.event.partial.html',
+        templateUrl: './app/event/partials/new.event.partial.html',
         targetEvent: ev,
         locals: {
           currentMonth: register.selectedMonth,
