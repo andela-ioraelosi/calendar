@@ -24,6 +24,8 @@
     <!-- Calendar content -->
     <section ng-controller="MonthController as register" layout="column">
 
+      <month-example></month-example>
+
       <!-- Month Selector -->
       <md-tabs md-selected="register.selectedMonth" flex>
 
@@ -88,5 +90,6 @@
     <script src="./app/event/services/month.service.js"></script>
     <script src="./app/event/controllers/month.controller.js"></script>
     <script src="./app/event/controllers/day.controller.js"></script>
+    <script src="./app/event/directives/month.directive.js"></script>
   </body>
 </html>
