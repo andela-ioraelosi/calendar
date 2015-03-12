@@ -251,20 +251,13 @@
       {
         "id": 8,
         "events": [
-          {
-            "title": "Facilitate Discrete Math Class."
-          },
-          {
-            "title": "Complete Calendar app."
-          }
+
         ]
       },
       {
         "id": 9,
         "events": [
-          {
-            "title": "Bootcamp Begins"
-          }
+
         ]
       },
       {
@@ -452,20 +445,13 @@
       {
         "id": 8,
         "events": [
-          {
-            "title": "Facilitate Discrete Math Class."
-          },
-          {
-            "title": "Complete Calendar app."
-          }
+
         ]
       },
       {
         "id": 9,
         "events": [
-          {
-            "title": "Bootcamp Begins"
-          }
+
         ]
       },
       {
@@ -619,6 +605,15 @@
   "id": 4,
   "days": [
       {
+
+        },
+      {
+
+        },
+      {
+
+        },
+      {
         "id": 1,
         "events": [
 
@@ -663,20 +658,13 @@
       {
         "id": 8,
         "events": [
-          {
-            "title": "Facilitate Discrete Math Class."
-          },
-          {
-            "title": "Complete Calendar app."
-          }
+
         ]
       },
       {
         "id": 9,
         "events": [
-          {
-            "title": "Bootcamp Begins"
-          }
+
         ]
       },
       {
@@ -794,21 +782,18 @@
         ]
       },
       {
+        "id": 29,
+        "events": [
 
+        ]
       },
       {
+        "id": 30,
+        "events": [
 
+        ]
       },
       {
-      },
-      {
-
-      },
-      {
-
-      },
-      {
-
       },
       {
 
@@ -820,6 +805,21 @@
   "id": 5,
   "days": [
       {
+
+      },
+      {
+
+      },
+      {
+
+      },
+      {
+
+      },
+      {
+
+      },
+      {
         "id": 1,
         "events": [
 
@@ -864,20 +864,13 @@
       {
         "id": 8,
         "events": [
-          {
-            "title": "Facilitate Discrete Math Class."
-          },
-          {
-            "title": "Complete Calendar app."
-          }
+
         ]
       },
       {
         "id": 9,
         "events": [
-          {
-            "title": "Bootcamp Begins"
-          }
+
         ]
       },
       {
@@ -995,24 +988,16 @@
         ]
       },
       {
+        "id": 29,
+        "events": [
 
+        ]
       },
       {
+        "id": 30,
+        "events": [
 
-      },
-      {
-      },
-      {
-
-      },
-      {
-
-      },
-      {
-
-      },
-      {
-
+        ]
       }
     ]
   },
