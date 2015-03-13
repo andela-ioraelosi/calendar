@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('event')
-  .controller('DayController', ['MonthService', 'currentMonth', 'currentDay', 'currentEvent', 'editing', 'adding', function (MonthService, currentMonth, currentDay, currentEvent, editing, adding) {
+  .controller('DayController', ['MonthService', 'currentMonth', 'currentDay', 'currentEvent', 'editing', 'adding', '$scope', function (MonthService, currentMonth, currentDay, currentEvent, editing, adding, $scope) {
     var register = this;
 
     register.firstDayID = MonthService.getFirstDayID(currentMonth);
 
-    register.dayID = currentDay - 1 + register.firstDayID;
+    register.dayID = (currentDay ? currentDay : 1) - 1 + register.firstDayID;
     register.selectedMonth = currentMonth;
     register.eventID = currentEvent;
 
